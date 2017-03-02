@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="UTF-8"><title>Test</title>
+</head>
+<body>
+
+<!-- <audio id="audio" preload="auto">
+    <source src="naha-f.mp3?cache=1" type="audio/mp3" />
+</audio>
+-->
+<audio id="audio"></audio>
+<script>
+var req = new XMLHttpRequest();
+req.open('get','naha-f.mp3?cache=1',true);
+req.responseType = 'blob';
+
+req.onload = function(){
+var audioBlob = this.response;
+var aud = URL.createObjectURL(audioBlob);
+audio.src = aud;
+alert('Audio is loaded');
+//playSprite('naha1');
+}
+req.send();
+</script>
+
+
+
+<button onclick="playSprite('naha1');">naha1</button>
+<button onclick="playSprite('naha2');">naha2</button>
+<button onclick="playSprite('naha3');">naha3</button>
+<button onclick="playSprite('naha4');">naha4</button>
+<button onclick="playSprite('naha5');">naha5</button>
+<button onclick="playSprite('naha6');">naha6</button>
+<button onclick="playSprite('naha7');">naha7</button>
+<button onclick="playSprite('naha8');">naha8</button>
+<button onclick="playSprite('naha9');">naha9</button>
+<button onclick="playSprite('naha10');">naha10</button>
+<button onclick="playSprite('naha11');">naha11</button>
+<button onclick="playSprite('naha12');">naha12</button>
+<button onclick="playSprite('naha13');">naha13</button>
+<button onclick="playSprite('naha14');">naha14</button>
+<button onclick="playSprite('naha15');">naha15</button>
+<button onclick="playSprite('naha16');">naha16</button>
+<button onclick="playSprite('naha17');">naha17</button>
+<button onclick="playSprite('naha18');">naha18</button>
+<button onclick="playSprite('naha19');">naha19</button>
+<button onclick="playSprite('naha20');">naha20</button>
+<button onclick="playSprite('naha21');">naha21</button>
+<button onclick="playSprite('naha22');">naha22</button>
+<button onclick="playSprite('naha23');">naha23</button>
+<button onclick="playSprite('naha24');">naha24</button>
+<button onclick="playSprite('naha25');">naha25</button>
+<button onclick="playSprite('remark1');">remark1</button>
+<button onclick="playSprite('remark2');">remark2</button>
+<button onclick="playSprite('remark3');">remark3</button>
+<button onclick="playSprite('remark4');">remark4</button>
+<button onclick="playSprite('remark5');">remark5</button>
+<button onclick="playSprite('remark6');">remark6</button>
+<button onclick="playSprite('remark7');">remark7</button>
+<button onclick="playSprite('remark8');">remark8</button>
+<button onclick="playSprite('remark9');">remark9</button>
+
+
+<!-- <button onclick="playSprite('naha2');">Play Meow 2 Sprite</button>
+<button onclick="playSprite('naha3');">Play Whine Sprite</button>
+<button onclick="playSprite('naha26');">remark</button> -->
+
+<button onclick="isplaying();">playing</button>
+<button onclick="start();">Start</button>
+<button onclick="cycle();">Start/Stop</button>
+
+<script src="js.js"></script>
+<!--- <script>window.onload = playSprite('naha1');</script> -->
+</body></html>

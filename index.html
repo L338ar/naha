@@ -1,3 +1,65 @@
-<html><head><title>test</title></head>
-<body>this is a test</body>
-</html>
+<!DOCTYPE HTML>
+<html><head><meta charset="UTF-8"><title>Test</title>
+<style type="text/css">
+#on {
+    position: absolute;
+    top: 107px;
+    left: 210px;
+    display:none;
+    }
+
+#off {
+    position: absolute;
+    top: 00px;
+    left: 00px;
+    display:none;
+
+}
+
+</style>
+
+
+</head>
+<body>
+
+<audio id="audio"></audio>
+<script>
+var loaded=function(){
+document.getElementById("loading").style.display="none";
+document.getElementById("off").style.display="inline";
+
+}
+
+var req = new XMLHttpRequest();
+req.open('get','naha-f.mp3?cache=1',true);
+req.responseType = 'blob';
+
+req.onload = function(){
+var audioBlob = this.response;
+var aud = URL.createObjectURL(audioBlob);
+audio.src = aud;
+loaded();
+}
+req.send();
+</script>
+
+<div id="loading">
+<img src="radio.gif">
+
+</div>
+<div id="off">
+<img src="phoneoff.png"  class="under" / onclick="showme()">
+<div id="on">
+<img src="phoneon.png" class="over" onclick="showme()"/>
+</div>
+</div>
+
+<!---
+<button onclick="isplaying();">playing</button>
+<button onclick="start();">Start</button>
+<button onclick="cycle();">Start/Stop</button>
+--->
+
+<script src="js.js"></script>
+<!--- <script>window.onload = playSprite('naha1');</script> -->
+</body></html>
