@@ -148,7 +148,7 @@ length: 0.747
 
 
 
-var inter=Math.floor((Math.random() * (10)) + 11);
+var inter=Math.floor((Math.random() * (7)) + 11);
 var interc=1;
 var currentSprite = {};
 
@@ -220,7 +220,7 @@ sprite=Math.floor((Math.random() * (9)) + 1);
 if (audioSprite.paused){
 playSprite("remark"+sprite);
 interc=0;
-inter=Math.floor((Math.random() * (10)) + 11);
+inter=Math.floor((Math.random() * (7)) + 11);
 }
 start();
 }
